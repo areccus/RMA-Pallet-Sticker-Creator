@@ -23,7 +23,7 @@ layout = [
     [sg.Text('Number of Pallets:', size=(20, 1)), sg.Input(key='-NumPallets-', enable_events=True)],
     [sg.Text('Client:', size=(20, 1)), sg.Input(key='-Client-', enable_events=True)],
     #[sg.Text('Date Received:', size=(20, 1)),sg.Input(key='-Date-', disabled=True, use_readonly_for_disable=False), sg.CalendarButton('', image_data=calendar, close_when_date_chosen=True, target='-Date-', location=(0,0), no_titlebar=False, format='%m/%d/%Y')],
-    [sg.Text('Date Received:', size=(20, 1)),sg.Input(key='-Date-', disabled=True, use_readonly_for_disable=False), sg.Button('', image_data=calendar, key='-ChooseDate-')],
+    [sg.Text('Date Received:', size=(20, 1)),sg.Input(key='-Date-', readonly=True, disabled_readonly_background_color='white'), sg.Button('', image_data=calendar, key='-ChooseDate-')],
     [sg.Text('Choose Printer', size=(20, 1))],
     [sg.Combo(q, key='-Printer-',readonly=True)],
     [sg.Button('Generate Label'), sg.Button('Clear'), sg.Exit()]
